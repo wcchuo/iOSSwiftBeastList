@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WEh-IR-Bgy">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beast-->
+        <scene sceneID="YeO-PV-jyp">
+            <objects>
+                <tableViewController id="WH1-WG-W16" userLabel="Beast" customClass="BeastListViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" id="aiW-2l-NHc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationLevel="7" indentationWidth="11" reuseIdentifier="BeastCell" rowHeight="83" id="WRf-bo-M7V">
+                                <rect key="frame" x="0.0" y="86" width="600" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WRf-bo-M7V" id="G7A-ui-o0V">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="82.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJi-Yq-Ut5">
+                                            <rect key="frame" x="8" y="8" width="78" height="66.5"/>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Beast">
+                                                <color key="titleColor" red="0.98737392469999996" green="1" blue="0.97710490279999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="toBeastButtonPressed:" destination="WH1-WG-W16" eventType="touchUpInside" id="HHj-Nn-II4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WH1-WG-W16" id="yff-Am-9WZ"/>
+                            <outlet property="delegate" destination="WH1-WG-W16" id="WZW-4v-Osp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="To Beast" id="GeS-vJ-YpM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jR7-Jd-sXh">
+                            <connections>
+                                <action selector="addBeastButtonPressed:" destination="WH1-WG-W16" id="i2H-lv-Ljb"/>
+                                <segue destination="WQU-aV-hj9" kind="presentation" identifier="AddNewBeast" id="bLC-fQ-aJ9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="WQU-aV-hj9" kind="presentation" identifier="EditBeast" modalTransitionStyle="flipHorizontal" id="Fhd-Ql-Vj7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-Fg-AAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="-137"/>
+        </scene>
+        <!--Beasted-->
+        <scene sceneID="u7Y-WL-OTl">
+            <objects>
+                <tableViewController id="uFt-hB-usB" customClass="BeastedListViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sAJ-yE-bpm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BeastedCell" id="UZS-WH-6br">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZS-WH-6br" id="tpc-zE-t9f">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uFt-hB-usB" id="orX-ve-CQb"/>
+                            <outlet property="delegate" destination="uFt-hB-usB" id="N7Z-nJ-YM4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Beasted" id="dRm-M9-DqG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bby-HA-caC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="606"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wCW-nY-cgU">
+            <objects>
+                <tabBarController id="WEh-IR-Bgy" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="fwQ-AN-0RW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7vb-aS-jl8" kind="relationship" relationship="viewControllers" id="xiO-8Y-H3G"/>
+                        <segue destination="Ds6-xd-T5f" kind="relationship" relationship="viewControllers" id="k7j-cb-wCS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amo-4G-Efp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="349"/>
+        </scene>
+        <!--Just Beast It-->
+        <scene sceneID="zgt-1b-dYg">
+            <objects>
+                <tableViewController id="nhW-M3-ivw" customClass="BeastDetailsViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="VPD-dK-1Xt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="K0F-As-JiP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nsb-UZ-NFW">
+                                        <rect key="frame" x="0.0" y="99" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nsb-UZ-NFW" id="Dfj-d4-evd">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0n-kC-e72">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="o0n-kC-e72" secondAttribute="bottom" id="4gy-I0-Dw1"/>
+                                                <constraint firstItem="o0n-kC-e72" firstAttribute="leading" secondItem="Dfj-d4-evd" secondAttribute="leadingMargin" id="M14-16-IMr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="o0n-kC-e72" secondAttribute="trailing" id="WQu-eX-46A"/>
+                                                <constraint firstItem="o0n-kC-e72" firstAttribute="top" secondItem="Dfj-d4-evd" secondAttribute="topMargin" id="dsc-QK-utL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="nhW-M3-ivw" id="m70-B7-sbB"/>
+                            <outlet property="delegate" destination="nhW-M3-ivw" id="IDa-o6-AVf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Just Beast It" id="22N-31-xHI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rwY-hQ-FeO">
+                            <connections>
+                                <action selector="cancelBarButtonPressed:" destination="nhW-M3-ivw" id="kQ1-yT-Gdr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="wPf-W1-3i1">
+                            <connections>
+                                <action selector="doneBarButtonPressed:" destination="nhW-M3-ivw" id="6Bw-XU-0YH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newBeastTextField" destination="o0n-kC-e72" id="MeC-Mt-dqd"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOf-eV-tVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696" y="-137"/>
+        </scene>
+        <!--To Beast-->
+        <scene sceneID="FUd-zZ-jzc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7vb-aS-jl8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="To Beast" id="mKS-eD-QM1" userLabel="To Beast"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0VD-jC-Whp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WH1-WG-W16" kind="relationship" relationship="rootViewController" id="bit-52-lf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDi-rI-iM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="-137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j95-59-3jH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WQU-aV-hj9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="59A-n8-kBV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nhW-M3-ivw" kind="relationship" relationship="rootViewController" id="Tgl-x9-phq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ful-l1-GEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-137"/>
+        </scene>
+        <!--Beasted-->
+        <scene sceneID="A4F-Ik-W83">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ds6-xd-T5f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Beasted" id="nhp-ng-YWs" userLabel="Beasted"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DU7-kB-7MS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uFt-hB-usB" kind="relationship" relationship="rootViewController" id="H1Z-tv-Skb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1A-28-2hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="606"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bLC-fQ-aJ9"/>
+    </inferredMetricsTieBreakers>
+</document>
